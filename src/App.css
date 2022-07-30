@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
-}
+@keyframes enterRight {
+  0% {
+    right: -25vw;
+  }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  100% {
+    right: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes exitRight {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: -25vw;
+  }
+}
+
+#app {
+  width: 25vw;
+  height: 32vh;
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+
+/**/
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 25vw;
+  height: 32vh;
+  position: relative;
+  right: 0vw;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  animation: enterRight 2s;
 }
 
-.App-link {
-  color: #61dafb;
+.enter {
+  animation: enterRight 2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.exit {
+  animation: exitRight 2s;
+}
+
+.closeContainer {
+  position: absolute;
+  left: 1vw;
+  top: 1vw;
+  width: 2vw;
+  height: 2vw;
+  z-index: 99;
+}
+
+.blurSection {
+  position: relative;
+  height: 25vh;
+  width: 100%;
+  margin-top: -5vh;
+}
+
+.quizSection {
+  position: relative;
+  height: 10vh;
+  width: 100%;
 }
