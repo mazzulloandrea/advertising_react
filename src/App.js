@@ -6,12 +6,13 @@ import Quiz from './components/quiz';
 function App() {
 
   function close() {
+    console.log('close');
     const anim = document.getElementById("animation");
     if (anim.classList.value.includes('exit')) {
       return;
     } else {
       anim.classList.toggle("exit");
-      anim.onanimationend = (evt => evt.target.style.right = '-25vw')
+      anim.onanimationend = (evt => evt.target.style.right = '-100vw')
     }
   };
 
