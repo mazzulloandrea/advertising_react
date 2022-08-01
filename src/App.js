@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import CloseButton from './components/CloseButton';
-import Blur from './components/Blur';
-import Quiz from './components/Quiz';
+import CloseButton from '/components/CloseButton';
+import Blur from '/components/Blur';
+import Quiz from '/components/Quiz';
 
 function App() {
   const [closeAnimation, setCloseAnimation] = useState(null);
